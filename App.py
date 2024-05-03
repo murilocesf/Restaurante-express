@@ -1,8 +1,9 @@
-import os
+   import os
 
-#restaurantes = ["Pé de banha", "Coritiba feijoadas"]
 #Inserir dicionario em outra linguagem, chave valor
-restaurante=[{}]
+restaurantes=[{'nome':'Bombaxa do boi gordo','categoria':'Churrascaria','ativo':True},
+             {'nome':'WiskyDan','categoria':'Bebidas','ativo':False},
+             {'nome':'Recanto Banha boa','categoria':'pastelaria','ativo':True}]
 
 def finalizar_app():
     os.system("clear")
@@ -14,7 +15,7 @@ def voltar_menu_principal():
     main()
 
 def mostrar_subtitulo(texto):
-    os.system("clear")
+    os.system("cls")
     print(texto)
     print()
    
@@ -32,20 +33,28 @@ def opcao_invalida():
     voltar_menu_principal()
 
 def chamar_nome_do_app():
-    print("Restaurante Expressao\n")
+    print("'ℝ𝕖𝕤𝕥𝕒𝕦𝕣𝕒𝕟𝕥𝕖 𝕖𝕩𝕡𝕣𝕖𝕤𝕤𝕠'")
 
 def listarRestaurantes():
    
     mostrar_subtitulo('Listando os Restaurantes')
     for restaurante in restaurantes:
-        print(f'-{restaurantes}')
+       
+        #modificar a maneira de listar para o dicionario
+        nome_restaurante=restaurantes['nome']
+        categoria=restaurante['categoria']
+        print(f'-{nome_restaurante}--{categoria}',--'{ativo}')
+        ativo = restaurante ['ativo']
         voltar_menu_principal()
        
 
 def cadastrar_novo_restaurante():
     nome_do_restaurante = input("Digite o nome do novo restaurante: ")
+    categoria = input(f"digite a categoria do restaurante (nome_do_restaurante):")
+    dados_do_restaurante = {"nome":nome_do_restaurante, "categoria":categoria, "ativo":False
     restaurantes.append(nome_do_restaurante)
     print(f"Você cadastrou o restaurante: {nome_do_restaurante}")
+    dados_do_restaurante = {"nome:" nome_do_restaurante, "categoria:", categoria_do_restaurante,"ativo:"False}
     voltar_menu_principal()
    
 
