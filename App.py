@@ -2,9 +2,9 @@
 import os
 
 restaurantes = [
-    {'nome': 'Bife sujo', 'categoria': 'prato-feito', 'ativo': True},
-    {'nome': 'Saco de feijao', 'categoria': 'feijoada', 'ativo': False},
-    {'nome': 'Pé de banha', 'categoria': 'pastelaria', 'ativo': True}
+    {'nome': 'carbonara', 'categoria': 'prato-feito', 'ativo': True},
+    {'nome': 'casca de bala', 'categoria': 'feijoada', 'ativo': False},
+    {'nome': 'pao de leite', 'categoria': 'pastelaria', 'ativo': True}
 ]
 
 def finalizar_app():
